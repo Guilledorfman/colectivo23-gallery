@@ -188,7 +188,7 @@ button>span{
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    opacity: 0;
+    opacity: .6;
 }
 
 .gallery-element:nth-child(4n - 3)>.img-cont>.background{
@@ -198,7 +198,7 @@ button>span{
     background-color: #F7413E;
 }
 .gallery-element:nth-child(4n - 1)>.img-cont>.background{
-    background-color: #104DE5;
+    background-color: #e51082;
 }
 .gallery-element:nth-child(4n)>.img-cont>.background{
     background-color: #ecc61a;
