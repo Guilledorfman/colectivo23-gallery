@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(21, 14, 31);
+}
+h1{
+    color: white;
+}
+.modal{
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.514);
+    position: absolute;
+    z-index: 3000;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+.modal.visible{
+    opacity: 1;
+    visibility: visible;
+}
+.modal.visible>.modal-content{
+    width: 500px;
+    height: 500px;
+    opacity: 1;
+    border-radius: 0;
+}
+.modal.visible>.modal-content>.modal-text{
+    opacity: 1;
+}
+.modal-content{
+    border: 5px solid white;
+    margin: auto;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+#close-btn{
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 2rem;
+    font-weight: 100;
+    cursor: pointer;
+}
+.modal-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+    background-blend-mode: soft-light;
+    background-image: url("https://res.cloudinary.com/dxoqq4yvo/image/upload/v1645052777/porfolio/pipes_g7awr4.png");
+}
+.modal-img>img{
+    width: 400px;
+}
+.modal-text{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    opacity: 0;
+}
+.modal-text>h2{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.418);
+    width: fit-content;
+}
+.modal-text>p{
+    color: white;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.418);
+}
+.main-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+button{
+    height: 50px;
+    border-radius: 100%;
+    min-width: 50px;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #ffffff00;
+    color: white;
+}
+
+button>span{
+    font-size: 24px;
+}
+.disabled{
+    color: rgba(0, 0, 0, 0.281);
+    cursor: default;
+    visibility: hidden;
+}
+
+.gallery-cont{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#elements-cont{
+    width: 600px;
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.gallery-element>button:hover{
+    opacity: 1;
+    background-color: rgba(238, 238, 238, 0.212);
+    cursor: pointer;
+}
+
+.gallery-element>button{
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.349);
+    transition: opacity .3s ease;
+    opacity: 0;
+}
+.info>h2{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.info>p{
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.gallery-element{
+    position: relative;
+    padding: 5px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+    min-width: 170px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.img-cont{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-cont>.background{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.gallery-element:nth-child(4n - 3)>.img-cont>.background{
+    background-color: #19E29A;
+}
+.gallery-element:nth-child(4n - 2)>.img-cont>.background{
+    background-color: #F7413E;
+}
+.gallery-element:nth-child(4n - 1)>.img-cont>.background{
+    background-color: #104DE5;
+}
+.gallery-element:nth-child(4n)>.img-cont>.background{
+    background-color: #ecc61a;
+}
+
+.img-cont>img{
+    max-height: 90%;
+    max-width: 170px;
+    position: absolute;
+}
+
+footer>p{
+    margin-top: 30px;
+    color: white;
+}
