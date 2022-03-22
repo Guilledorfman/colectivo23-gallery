@@ -94,7 +94,7 @@ const photos= [
     },
     {
         title: 'Neptuno',
-        text: '11,15 m/s²3​',
+        text: '11,15 m/s²​',
         img: 'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1647986212/planetas/3D_Neptune_amarze.png'
     }
 
